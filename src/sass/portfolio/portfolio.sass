@@ -1,0 +1,336 @@
+.portfolio
+	padding-top: 70px
+	.container
+		padding: 0 50px
+	&__block
+		margin-bottom: 180px
+		+r(640)
+			margin-bottom: 100px
+		h2
+			font-size: 72px
+			letter-spacing: 6px
+			text-transform: uppercase
+			margin-bottom: 100px
+			font-family: 'Proxima Nova Th'
+			+r(640)
+				margin-bottom: 80px
+				line-height: 0.6
+		h3
+			font-size: 18px
+			font-weight: 600
+			text-transform: uppercase
+			letter-spacing: 2px
+			width: 90%
+			margin-bottom: 30px
+			font-family: 'Proxima Nova Rg'
+			text-align: left
+			position: relative
+			+r(640)
+				margin-top: 50px
+				font-size: 28px
+				letter-spacing: 3.3px
+				width: 100%
+				text-align: left
+			&:before
+				content: ''
+				border-bottom: 2px solid #000000
+				width: 120px
+				display: block
+				position: absolute
+				top: 60px
+				right: -130px
+				z-index: 10
+				+r(640)
+					height: 230px
+					width: 3px
+					border-left: 2px solid #000000
+					left: -30px
+					top: -133px
+		p
+			font-size: 14px
+			font-weight: 500
+			letter-spacing: 1px
+			margin-bottom: 15px
+			font-family: 'Proxima Nova Rg'
+			text-align: left
+			+r(640)
+				text-align: left
+				font-size: 24px
+				font-weight: 500
+				letter-spacing: 1.7px
+		&__image
+			width: 470px
+			height: 298px
+			box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1)
+			position: relative
+			display: block
+			+r(640)
+				width: 100%
+				height: 98%
+			img
+				width: 100%
+		.btn
+			width: 280px
+			margin-top: 30px
+		&__text__mobile
+			.more
+				margin: 40px 0
+				font-size: 24px
+				.icon
+					font-size: 32px
+			.btn
+				background: #f52e38
+				width: 100%
+				height: 80px
+				color: #ffffff
+				font-size: 24px
+				letter-spacing: 2.7px
+				font-weight: 600
+				text-transform: uppercase
+				display: flex
+				align-items: center
+				justify-content: center
+		&--1
+			.portfolio__block
+				&__image
+					+r(640)
+						top: 0
+				&__text
+					margin-right: 40px
+					+r(640)
+						margin-right: 0
+		&--2
+			.portfolio__block
+				&__text
+					margin-left: 70px
+					+r(640)
+						margin-left: 0
+					h3
+						&:before
+							left: -140px
+							top: 60px
+							right: initial
+							+r(640)
+								right: initial
+								left: -30px
+								top: -138px
+								height: 200px
+	&__insta
+		h2
+			font-size: 30px
+			font-weight: bold
+			letter-spacing: 3.3px
+			text-transform: uppercase
+			text-align: left
+			margin-bottom: 30px
+		a
+			background-color: #b4b6b9
+			width: 100%
+			height: 80px
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 24px
+			font-weight: bold
+			letter-spacing: 2.7px
+			color: #ffffff
+			text-transform: uppercase
+			span
+				margin-left: 10px
+				width: 45px
+				height: 45px
+				border-radius: 50%
+				display: flex
+				background: #ffffff
+				justify-content: center
+				align-items: center
+			svg
+				fill: #9b9b9b
+	.copyright
+		margin-top: 50px
+		font-size: 18px
+		font-weight: 500
+		letter-spacing: 2px
+		text-align: center
+		color: #666666
+		margin-bottom: 30px
+	&__contact
+		position: fixed
+		transform: translateY(-110%)
+		border: 20px solid #ffffff
+		box-sizing: border-box
+		z-index: 1000
+		top: 0
+		width: 100%
+		height: 100%
+		background: #ffffff
+		display: flex
+		flex-wrap: wrap
+		transition: all 1s cubic-bezier(0.74, -0.01, 0.36, 1)
+		+r(640)
+			background: #1f1f1f
+			border: none
+		&.is-active
+			transform: translateY(0%)
+		.content__logo
+			position: relative
+			width: 200px
+		.form
+			width: 420px
+			.btn
+				width: 275px
+				+r(640)
+					width: 100%
+		&__left
+			background-color: #ddd8da
+			width: 32%
+			padding-left: 90px
+			position: relative
+			+r(640)
+				display: none
+			h3
+				color: #f52e38
+				text-transform: uppercase
+				line-height: 1.71
+				letter-spacing: 1.4px
+				font-size: 14px
+				margin-bottom: 30px
+		&__info
+			position: absolute
+			bottom: 300px
+			a
+				line-height: 1.71
+				letter-spacing: 1.4px
+				font-size: 14px
+				font-weight: bold
+				color: #000000
+				display: block
+		&__social
+			position: absolute
+			bottom: 140px
+			a
+				width: 50px
+				height: 50px
+				background: #f52e38
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-right: 10px
+				transition: all 0.3s
+				i
+					color: #ffffff
+					font-size: 24px
+					transition: all 0.3s
+				svg
+					fill: #ffffff
+					width: 24px
+					height: 21px
+					transition: all 0.3s
+				&:hover
+					background: #ffffff
+					i, svg
+						color: #f52e38
+						fill: #f52e38
+		&__copyright
+			font-size: 9px
+			line-height: 4.44
+			letter-spacing: 1.8px
+			text-align: left
+			color: #666666
+			position: absolute
+			bottom: 40px
+		&__right
+			width: 65%
+			display: flex
+			align-items: center
+			+r(640)
+				width: 100%
+		.close-form
+			top: 40px
+			+r(640)
+				top: 90px
+				
+
+.more
+	color: #f52e38
+	font-size: 12px
+	font-weight: bold
+	letter-spacing: 1px
+	display: flex
+	align-items: center
+	margin-top: 20px
+	text-transform: uppercase
+	transition: all 0.3s
+	font-family: 'Proxima Nova Rg'
+	.icon
+		padding-left: 10px
+		display: inline-block
+		font-size: 16px
+		+r(640)
+			font-size: 25px
+	&:hover
+		color: #000000
+
+.on-home
+	color: #000000
+	transition: all 0.3s
+	position: relative
+	top: 18px
+	+r(640)
+		top: -10px
+	.icon
+		transform: rotate(-180deg)
+		display: inline-block
+		+r(640)
+			font-size: 30px
+			margin-right: 5px
+	span
+		transform: rotate(-90deg)
+		display: inline-block
+		font-size: 12px
+		font-weight: 600
+		letter-spacing: 2.6px
+		white-space: nowrap
+		text-transform: uppercase
+		position: relative
+		top: 40px
+		left: -42px
+		font-family: 'Proxima Nova Rg'
+		+r(640)
+			transform: rotate(0deg)
+			position: static
+			font-size: 20px
+			display: block
+	&:hover
+		color: #f52e38
+
+
+#portfolio
+	&-1
+		position: absolute
+		right: -140px
+		top: 50px
+	&-2
+		div
+			position: absolute
+			top: 150px
+			left: -20px
+	&-3
+		div
+			position: absolute
+			right: -25px
+			top: 35%
+			img
+				width: 65px
+	&-4
+		div
+			position: absolute
+			right: -80px
+			top: -20px
+	&-5
+		div
+			position: absolute
+			right: -30px
+			bottom: 20px
+			img
+				width: 120px

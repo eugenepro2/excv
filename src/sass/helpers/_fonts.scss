@@ -1,0 +1,105 @@
+@font-face
+{
+    font-family: 'Proxima Nova Th';
+    font-weight: 800;
+    font-style: normal; 
+
+    src: url('../fonts/ProximaNova-Extrabld.woff2') format('woff2'), url('../fonts/ProximaNova-Extrabld.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'Proxima Nova Rg';
+    font-weight: normal;
+    font-style: normal; 
+
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'), url('../fonts/ProximaNova-Regular.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'Proxima Nova Rg';
+    font-weight: bold;
+    font-style: normal; 
+
+    src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'), url('../fonts/ProximaNova-Bold.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    font-style: normal; 
+
+    src: url('../fonts/ProximaNova-Semibold.woff2') format('woff2'), url('../fonts/ProximaNova-Semibold.woff') format('woff');
+}
+
+@font-face
+{
+    font-family: 'icomoon';
+    font-weight: normal;
+    font-style: normal; 
+
+    src: url('../fonts/icomoon.eot?k05hgz');
+    src: url('../fonts/icomoon.eot?k05hgz#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?k05hgz') format('truetype'), url('../fonts/icomoon.woff?k05hgz') format('woff'), url('../fonts/icomoon.svg?k05hgz#icomoon') format('svg');
+}
+
+[class^='icon-'],
+[class*=' icon-']
+{
+    font-family: 'icomoon' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+
+    text-transform: none;
+
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icons8-viber:before
+{
+    font-size: 28px; 
+
+    content: '\e902';
+}
+
+.icon-right-arrow:before
+{
+    content: '\e901';
+}
+
+.icon-multimedia:before
+{
+    content: '\e90b';
+}
+
+.icon-telegram:before
+{
+    content: '\e907';
+}
+
+.icon-email-envelope-button:before
+{
+    content: '\e903';
+}
+
+.icon-mail-envelope-closed:before
+{
+    font-size: 28px; 
+
+    content: '\e900';
+}
+
+.icon-checkmark:before
+{
+    content: '\ea10';
+}
+
+.icon-whatsapp:before
+{
+    content: '\ea93';
+}

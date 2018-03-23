@@ -1,0 +1,137 @@
+---
+title: Portfolio
+---
+extends layouts/_layout
+block content
+  section.portfolio.section-open
+    .container
+      .portfolio__block.portfolio__block--1#portfolio__block--1
+        .row
+          .col-sm-1.col-xs-6.end-xs.start-sm.first-sm
+            a(href="index.html").on-home
+              i.icon.icon-right-arrow
+              span На главную
+          .col-sm-11.col-xs-6.first-xs
+            h2 Наши <br>работы
+        .row.center-xs.start-sm
+          .col-sm-1.first-sm.hidden-sm
+          .col-sm-5.col-xs-10.first-sm
+            .portfolio__block__text
+              h3 Имиджевый интернет-магазин для компании Smartlife.bio
+              p Продукт для здоровья и повышения работоспособности, а не достижения результата любой ценой. Его можно принимать всей семьей. Это природный продукт, основой которого являются высокоэффективные вещества, экстракты, специально подобранные в один комплекс для получения мощного синергического эффекта.
+              a(href="http://smartlife.bio/" target="_blank").more.hidden-sm Перейти на сайт smartlife.bio
+                .icon.icon-right-arrow
+              a.btn.open-contact-form.hidden-sm
+                .mobile
+                  .mobile__close
+                  i.icon-multimedia
+                .open
+                .btn__block.ripplelink
+                  | Хочу такой же
+                  span.ink.animate
+              .portfolio__block__text__mobile.hidden-xs
+                a(href="http://smartlife.bio/" target="_blank").more Перейти на сайт
+                  .icon.icon-right-arrow
+                a.btn.open-contact-form Хочу такой же
+          .col-sm-6.first-xs.col-xs-12
+            .portfolio__block__image
+              img(src="img/smartlife.png", alt="")
+      .portfolio__block.portfolio__block--2#portfolio__block--2
+        .row.center-xs
+          .col-sm-1
+          .col-sm-5
+            .portfolio__block__image
+              img(src="img/lavateria.png", alt="")
+          .col-sm-6.col-xs-10
+            .portfolio__block__text
+              h3 Онлайн-сервис прачечной Lavateria
+              p «Никаких забот о стирке. Заберем, постираем, выгладим и вернем в удобное для вас время», - главная идея и особенность бренда.
+              p Перед нами стояла задача создать не только понятный и доступный пользователю интерфейс, но и наполнить его интересным дизайнерским решением. Для большего комфорта потребителей, были разработаны личный кабинет, позволяющий отслеживать заказы, и система абонементного обслуживания на выполнение данных услуг.
+              a(href="http://lavateria.ru/" target="_blank").more.hidden-sm Перейти на сайт lavateria.ru
+                .icon.icon-right-arrow
+              a.btn.open-contact-form.hidden-sm
+                .mobile
+                  .mobile__close
+                  i.icon-multimedia
+                .open
+                .btn__block.ripplelink
+                  | Хочу такой же
+                  span.ink.animate
+              .portfolio__block__text__mobile.hidden-xs
+                a(href="http://lavateria.ru/" target="_blank").more Перейти на сайт
+                  .icon.icon-right-arrow
+                a.btn.open-contact-form Хочу такой же
+      .portfolio__insta.hidden-xs
+        .row.center-xs
+          .col-xs-10
+            h2 Больше работ<br>в instagram
+            a(href="https://www.instagram.com/excvru/") Перейти в 
+              span
+                +icon('insta')
+        .copyright © 2012 — 2017 Студия EXCV
+  .portfolio__contact
+    .portfolio__contact__left
+      .content__logo
+        .content__logo__image
+          img(src='img/logo.svg', alt='')
+        p design agency
+        #portfolio-1
+          div
+            img(src="img/4.png", alt="")
+        #portfolio-2
+          div
+            img(src="img/2.png", alt="")
+      .portfolio__contact__info
+        h3 Связаться с нами
+        a(href="tel:+7(968) 950-35-05") +7(968) 950-35-05
+        a(href="mailto:sales@excv.ru") sales@excv.ru 
+      #portfolio-3
+        div
+          img(src="img/3.png", alt="")
+      .portfolio__contact__social
+        h3 Мы в соц. сетях
+        .flex
+          a(href="#")
+            i.icon.icon-telegram
+          a(href="#")
+            +icon('insta')
+      .portfolio__contact__copyright
+        p © 2012 — 2017 Студия EXCV
+        #portfolio-4
+          div
+            img(src="img/1.png", alt="")
+      #portfolio-5
+        div
+          img(src="img/5.png", alt="")
+    .portfolio__contact__right
+      form.form(action='send.php', method='post')
+        input.utm_source(type='hidden', name='utm_source')
+        input.utm_medium(type='hidden', name='utm_medium')
+        input.utm_campaign(type='hidden', name='utm_campaign')
+        input.utm_term(type='hidden', name='utm_term')
+        input.utm_content(type='hidden', name='utm_content')
+        p Переходим к действиям
+        h2 Заполните ваши контактные данные и кратко опишите задачу:
+        .form__element
+          input#username.floated(type='text', required='', autocomplete='off', name='name')
+          label(for='username') Ваше имя
+        .form__element
+          input#tel.floated(type='tel', required='', autocomplete='off', name='phone')
+          label(for='tel') Телефон
+        .form__element
+          input#email.floated(type='text', required='', autocomplete='off', name='email')
+          label(for='email') E-mail
+        textarea(placeholder='Напишите своими словами все, что поможет нам при обсуждении Вашего проекта', name='comment')
+        input#checkbox(type='checkbox')
+        label(for='checkbox')
+          | Я принимаю условия 
+          a(href='#') передачи информации
+        label(for='send')
+          .btn
+            input#send(type='submit', value='')
+            .btn__block Отправить
+       a.close-form
+        | закрыть
+        span
+
+

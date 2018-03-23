@@ -1,0 +1,483 @@
+.contact
+  position: relative
+  display: none
+  overflow: hidden
+  width: 100%
+  max-width: 100%
+  height: 100vh
+  margin: 0
+  padding: 0
+  border-radius: 0
+  box-shadow: none
+  &.is-active
+    display: block
+  .btn
+    margin-bottom: 20px
+
+@media (max-width: 1024px)
+  .contact.is-active
+    overflow: visible
+    overflow-x: hidden
+    height: initial
+
+@media (max-width: 640px)
+  .contact.is-active
+    overflow: visible
+    overflow-x: hidden
+    height: initial
+
+.contact__copyright
+  font-family: 'Proxima Nova Rg'
+  font-size: 18px
+  margin-top: 80px
+  margin-bottom: 20px
+  text-align: center
+  letter-spacing: 2px
+  text-transform: uppercase
+  color: #666
+
+@media (min-width: 1024px)
+  .contact__copyright
+    display: none
+
+.contact__thanks
+  font-family: 'Proxima Nova Rg'
+  font-size: 24px
+  font-weight: 600
+  display: none
+  transition: all .3s
+  transform: translateY(-550%)
+  letter-spacing: 2px
+  text-transform: uppercase
+  span
+    color: #f52e38
+
+@media (max-width: 640px)
+  .contact__thanks
+    height: 100%
+    color: #fff
+
+.contact
+  .row
+    height: 100%
+  .img
+    overflow: hidden
+    height: 100vh
+    img
+      box-sizing: border-box
+      height: 100%
+      padding: 30px 0
+
+@media (max-width: 1024px)
+  .contact
+    padding-top: 50px
+    background: #1f1f1f
+
+@media (max-width: 1024px) and (max-width: 640px)
+  .contact
+    padding-top: 0
+
+@media (max-width: 1024px)
+  .contact .img
+    display: none
+
+.contact__date
+  font-family: 'Proxima Nova Rg'
+  font-size: 9px
+  position: absolute
+  left: 50%
+  display: none
+  padding-top: 70px
+  padding-bottom: 20px
+  transform: translateX(-50%)
+  letter-spacing: 1px
+  p
+    color: #666
+
+@media (max-width: 1024px)
+  .contact__date
+    display: inline-block
+
+.form
+  box-sizing: border-box
+  width: 290px
+  margin: 0 auto
+  p
+    font-family: 'Proxima Nova Rg'
+    font-size: 14px
+    font-weight: 800
+    padding-bottom: 25px
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: #f52e38
+  h2
+    font-family: 'Proxima Nova Rg'
+    font-size: 14px
+    line-height: 21px
+    padding-bottom: 35px
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: #000
+.form__element
+  position: relative
+  display: block
+  .floated
+    font-size: 14px
+    font-weight: 400
+    display: inline-block
+    box-sizing: border-box
+    width: 100%
+    margin-bottom: 15px
+    padding: 21px 30px 10px 30px
+    -webkit-transition: all .3s ease-in-out
+    transition: all .3s ease-in-out
+    color: #000
+    border: 1px solid #999
+    border-radius: 0
+    &:focus
+      text-indent: 0
+      border-bottom: 1px solid #f52e38
+      outline: none
+    + label
+      font-family: 'Proxima Nova Rg'
+      font-size: 16px
+      font-weight: 500
+      position: absolute
+      top: -13px
+      left: 30px
+      display: inline-block
+      transition: all .3s ease-in-out
+      transform: translateY(30px)
+      color: #999
+      text-shadow: 0 1px 0 rgba(19, 74, 70, 0)
+    &:active, &:invalid
+      text-indent: 0
+    &:focus + label, &:active + label
+      font-size: 10px
+      -webkit-transform: translateY(22px)
+      transform: translateY(22px)
+      opacity: .7
+    &:valid
+      border-bottom: 1px solid #f52e38
+      + label
+        font-size: 10px
+        -webkit-transform: translateY(22px)
+        transform: translateY(22px)
+        opacity: .7
+.form
+  textarea
+    font-family: 'Proxima Nova Rg'
+    box-sizing: border-box
+    font-size: 16px
+    color: #999
+    width: 100%
+    height: 150px
+    margin-bottom: 15px
+    padding: 20px 30px 10px 30px
+    resize: none
+    border: 1px solid #999
+    border-radius: 0
+    outline: none
+    +r(640)
+      border: 1px solid #ffffff
+    &::placeholder
+      color: #999
+      font-size: 16px
+      font-family: 'Proxima Nova Rg'
+    &:focus
+      border-bottom: 1px solid #f52e38
+  .btn
+    width: 100%
+    input
+      font-family: 'Proxima Nova Rg'
+      font-size: 16px
+      position: relative
+      z-index: 9
+      display: flex
+      width: 100%
+      padding: 20px 0
+      transition: all .3s
+      letter-spacing: 4px
+      text-transform: uppercase
+      color: #fff
+      border: none
+      border-radius: 0
+      background: #f52e38
+      justify-content: center
+      -webkit-appearance: none
+      -webkit-border-radius: 0
+  input
+    &[type='checkbox']
+      display: none
+      + label
+        font-family: 'Proxima Nova Rg'
+        font-size: 15px
+        font-weight: bold
+        font-weight: 400
+        position: relative
+        display: inline-block
+        padding-bottom: 25px
+        padding-left: 40px
+        cursor: pointer
+        color: #999
+        a
+          transition: all .3s
+          color: #999
+          border-bottom: 1px solid #dcd8da
+          &:hover
+            color: #f52e38
+        &::before
+          position: absolute
+          top: -1px
+          left: 0
+          display: inline-block
+          box-sizing: border-box
+          width: 25px
+          height: 25px
+          padding-top: 4px
+          padding-left: 4px
+          content: ''
+          border: 1px solid #f52e38
+          border-radius: 50%
+        &.invalid
+          color: #f52e38
+          a
+            color: #f52e38
+    &:checked + label::before
+      font-family: 'icomoon'
+      content: '\ea10'
+      color: #fff
+      background: #f52e38
+
+@media (max-width: 1024px)
+  .form
+    width: 680px
+
+@media (max-width: 640px)
+  .form
+    width: 470px
+
+@media (max-width: 1024px)
+  .form p
+    font-size: 36px
+
+@media (max-width: 640px)
+  .form p
+    font-size: 24px
+    padding-bottom: 10px
+
+@media (max-width: 1024px)
+  .form h2
+    font-size: 36px
+    line-height: 1.5
+    color: #fff
+
+@media (max-width: 640px)
+  .form h2
+    font-size: 24px
+    line-height: 1.5
+    margin-bottom: 20px
+
+@media (max-width: 1024px)
+  .form__element .floated
+    font-size: 24px
+    height: 120px
+    margin-bottom: 30px
+    color: #fff
+    background: none
+
+@media (max-width: 640px)
+  .form__element .floated
+    height: 85px
+    margin-bottom: 30px
+    color: #fff
+    border: 1px #fff solid
+
+@media (max-width: 1024px)
+  .form__element .floated + label
+    font-size: 30px
+    top: 17px
+
+@media (max-width: 640px)
+  .form__element .floated + label
+    font-size: 24px
+    top: 0
+    color: #fff
+
+@media (max-width: 1024px)
+  .form__element .floated
+    &:focus + label, &:active + label
+      font-size: 20px
+      -webkit-transform: translateY(10px)
+      transform: translateY(10px)
+
+@media (max-width: 640px)
+  .form__element .floated
+    &:focus + label, &:active + label
+      font-size: 16px
+
+@media (max-width: 1024px)
+  .form__element .floated:valid + label
+    font-size: 20px
+    -webkit-transform: translateY(10px)
+    transform: translateY(10px)
+
+@media (max-width: 640px)
+  .form__element .floated:valid + label
+    font-size: 16px
+
+@media (max-width: 1024px)
+  .form textarea
+    font-size: 30px
+    background: none
+
+@media (max-width: 640px)
+  .form textarea
+    font-size: 24px
+    color: #fff
+
+@media (max-width: 640px)
+  .form textarea::-webkit-input-placeholder
+    color: #fff
+    font-size: 24px
+    font-family: 'Proxima Nova Rg'
+
+@media (max-width: 1024px)
+  .form
+    .btn
+      background: #f52e38
+      input
+        height: 90px
+        border: none
+        background: #f52e38
+    .btn__block
+      font-size: 24px
+      top: 0
+      left: 0
+      height: 90px
+      border: none
+
+@media (max-width: 1024px)
+  .form input[type='checkbox'] + label
+    font-size: 30px
+    margin-top: 30px
+    margin-bottom: 30px
+    padding-left: 80px
+
+@media (max-width: 640px)
+  .form input[type='checkbox'] + label
+    font-size: 24px
+    padding-left: 60px
+
+@media (max-width: 1024px)
+  .form input[type='checkbox'] + label::before
+    width: 50px
+    height: 50px
+    padding-left: 10px
+
+@media (max-width: 640px)
+  .form input[type='checkbox'] + label::before
+    width: 40px
+    height: 40px
+    padding-left: 7px
+
+.blocker
+  z-index: 999
+  padding: 0
+  background: #fff
+
+.modal a.close-modal
+  display: none
+
+.close, .close-form
+  font-family: 'Proxima Nova Rg'
+  font-size: 12px
+  position: absolute
+  position: fixed
+  top: 70px
+  right: -35px
+  display: inline-block
+  padding: 15px 15px 15px 50px
+  cursor: pointer
+  transition: all .3s
+  transform: rotate(90deg)
+  animation-duration: 1s
+  animation-timing-function: ease
+  letter-spacing: 4px
+  text-transform: uppercase
+  color: #999
+  &:hover
+    animation-name: Tada
+    color: #f52e38
+    span
+      &:before, &:after
+        background-color: #f52e38
+      &:before
+        transform: rotate(45deg) translate(6px, 5px)
+      &:after
+        transform: rotate(-45deg) translate(9px, -8px)
+  span
+    position: relative
+    top: 6px
+    left: -125px
+    background-color: transparent
+    &:after, &:before
+      position: absolute
+      top: -10px
+      left: 0
+      content: ''
+      transition: all .3s
+    &:after
+      top: 10px
+      width: 36px
+      height: 4px
+      content: ''
+      transform: rotate(-53deg) translate(9px, -8px)
+      background-color: #999
+      backface-visibility: hidden
+    &:before
+      width: 36px
+      height: 4px
+      content: ''
+      transform: rotate(53deg) translate(6px, 5px)
+      background-color: #999
+      backface-visibility: hidden
+
+@media (max-width: 640px)
+  .close
+    right: -30px
+
+@media (max-width: 640px)
+  .close span
+    top: 7px
+
+@keyframes Tada
+  0%
+    transform: scale(1) rotate(90deg)
+
+  10%,
+    20%
+    transform: scale(0.9) rotate(93deg)
+
+  30%,
+    50%,
+    70%,
+    90%
+    transform: scale(1.1) rotate(87deg)
+
+  40%,
+    60%,
+    80%
+    transform: scale(1.1) rotate(93deg)
+
+  100%
+    transform: scale(1) rotate(90deg)
+
+
+@keyframes Mobile
+  0%
+    transform: rotate(90deg)
+
+  100%
+    transform: rotate(0deg)
+

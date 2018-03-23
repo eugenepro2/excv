@@ -1,0 +1,562 @@
++r(640)
+  .hidden-sm
+    display: none
++rmin(641)
+  .hidden-xs
+    display: none
+
+
+
+.section-open
+  transition: transform 0.86s cubic-bezier(0.74, -0.01, 0.36, 1)
+  &.is-active
+    position: fixed
+    transform: translateY(0) translateX(-40%) scale(0.83) rotateY(-5deg)  
+    +r(640)
+      transform: translateY(0) translateX(-100%) scale(1)
+  
+.landscape
+  display: none
+
+@media (max-width: 640px) and (orientation: landscape)
+  .landscape
+    position: fixed
+    z-index: 1000
+    display: block
+    width: 100%
+    height: 101%
+    background: #fff
+  .landscape__block
+    position: absolute
+    top: 50%
+    left: 50%
+    flex-direction: column
+    transform: translate(-50%, -50%)
+    img
+      display: inline-block
+      width: 150px
+      animation: Mobile 2s infinite ease-in-out
+    p
+      font-family: 'Proxima Nova Rg'
+      font-size: 30px
+      margin-top: 20px
+      text-align: center
+
+.flex
+  display: flex
+
+html
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+
+
+
+body
+  font-family: 'Proxima Nova Rg'
+  position: fixed
+  overflow: hidden
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  // perspective: 1000px
+  &.is-active
+    overflow-y: visible
+  &.no-hidden
+    overflow: visible
+    position: static
+
+p, h1, h2, h3, h4
+  margin: 0
+  padding: 0
+
+ul, ol
+  margin: 0
+  padding: 0
+  list-style: none
+
+a
+  cursor: pointer
+  text-decoration: none
+
+.btn
+  position: relative
+  z-index: 8
+  box-sizing: border-box
+  width: 80%
+  cursor: pointer
+  transition: all .3s
+  display: block
+  &__block
+    position: relative
+    transition: all .2s ease
+    transition-overflow: hidden
+    font-family: 'Proxima Nova Rg'
+    font-size: 16px
+    font-weight: 600
+    position: absolute
+    z-index: 10
+    right: -8px
+    bottom: -8px
+    display: flex
+    box-sizing: border-box
+    width: 100%
+    height: 60px
+    transition: all .3s
+    letter-spacing: 5px
+    text-transform: uppercase
+    color: #fff
+    border: 2px solid #000
+    justify-content: center
+    align-items: center
+  .open
+    position: relative
+    z-index: 9
+    display: flex
+    height: 60px
+    transition: all .3s
+    letter-spacing: 5px
+    text-transform: uppercase
+    color: #fff
+    background: #f52e38
+    justify-content: center
+    +r(640)
+      display: none
+  
+.btn
+  .mobile
+    display: none
+  .mobile__close
+    position: relative
+    top: 50px
+    left: 15px
+    display: none
+    &:before, &:after
+      position: absolute
+      display: inline-block
+      width: 70px
+      content: ''
+      border: 2px solid #fff
+    &:before
+      transform: rotate(45deg)
+    &:after
+      transform: rotate(-45deg)
+  &:hover .btn__block
+    right: 0
+    bottom: 0
+
+.fb-like
+  position: absolute !important
+  z-index: 20
+  right: 30px
+  bottom: 28px
+
+@media (max-width: 1024px)
+  .fb-like
+    bottom: 100px
+
+@media (max-width: 1024px)
+  .fb-like
+    bottom: 0
+    right: 20px
+
+@media (max-width: 640px)
+  .fb-like
+    display: none !important
+
+.scene
+  z-index: 9
+  div
+    width: 100%
+
+.scene__block--1
+  position: absolute
+  top: 600px
+  left: 47%
+
+@media (max-width: 1024px)
+  .scene__block--1
+    left: 0
+
+@media (max-width: 640px)
+  .scene__block--1
+    display: none
+
+.scene__block--2
+  position: relative
+  top: 300px
+  right: 75px
+  img
+    position: absolute
+    right: 0
+
+@media (max-width: 640px)
+  .scene__block--2
+    top: 50vh
+    right: 100px
+
+.scene__block--3
+  position: absolute
+  top: 180px
+  left: 260px
+
+@media (max-width: 1024px)
+  .scene__block--3
+    top: 100px !important
+
+@media (max-width: 640px)
+  .scene__block--3
+    top: 190px
+    left: 330px
+    right: initial
+
+.scene__block--4
+  position: absolute
+  top: 100px
+  right: 200px
+  img
+    position: absolute
+    right: 0
+
+@media (max-width: 640px)
+  .scene__block--4
+    top: 485px
+    left: -35px
+    right: initial
+
+.scene__block--5
+  position: absolute
+  top: 480px
+  right: 100px
+  img
+    position: absolute
+    right: 0
+
+@media (max-width: 640px)
+  .scene__block--5
+    top: 65vh
+    left: 0px
+    right: initial
+
+#preloader
+  position: fixed
+  z-index: 100
+  overflow: hidden
+  width: 100%
+  height: 100%
+  background: #fff
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 150px
+    transform: translate(-50%, -50%)
+
+@media (max-width: 640px)
+  .ripplelink
+    position: relative
+    overflow: hidden
+    width: 91%
+    transition: all .2s ease
+
+.ink
+  display: none
+
+@media (max-width: 640px)
+  .ink
+    position: absolute
+    display: block
+    transform: scale(0)
+    border-radius: 100%
+    background: rgba(0, 0, 0, 0.3)
+
+@media (max-width: 640px)
+  .animate
+    animation: ripple 1s linear
+
+@keyframes ripple
+  100%
+    transform: scale(2.5)
+    opacity: 0
+
+
+@media (max-width: 1180px)
+  .demo-wrap
+    display: none
+
+.slide-wrap
+  width: 100%
+  height: 250px
+  margin-top: 50px
+
+.slide-wrap__block
+  position: absolute
+  bottom: -160px
+  width: 96%
+  height: 350px
+  list-style: none
+  background: url('../img/ellipse.png') no-repeat
+  background-size: contain
+
+.slide-wrap
+  position: relative
+  width: 100%
+  li
+    position: absolute
+    z-index: 0
+    display: none
+    width: 300px
+  .inner
+    position: relative
+    h4
+      font-size: 23px
+      position: relative
+      padding-top: 60px
+      padding-bottom: 15px
+      &:before
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 30px
+        height: 3px
+        content: ''
+        background: #d9b48d
+      p
+        font-family: 'GothamProBold'
+        font-size: 90px
+        position: absolute
+        top: 0
+        left: 0
+        opacity: .1
+        color: #333
+    ul
+      padding-top: 15px
+      color: #666
+      li
+        font-size: 15px
+        line-height: 20px
+        position: relative
+        position: relative
+        display: block !important
+        padding-left: 17px
+        color: #666
+        &:after
+          position: absolute
+          top: 8px
+          left: 0
+          width: 4px
+          height: 4px
+          content: ''
+          border-radius: 180px
+          background: #666
+  .pos1
+    z-index: 1
+    top: 0
+    left: 3%
+    display: block
+    width: 180px
+    height: 200px
+  .pos2
+    z-index: 2
+    top: 35px
+    left: 24%
+    display: block
+    width: 220px
+    height: 200px
+  .pos3
+    z-index: 3
+    top: 50px
+    left: 45%
+    display: block
+    width: 300px
+    height: 200px
+  .pos4
+    z-index: 2
+    top: 35px
+    right: 15%
+    display: block
+    width: 220px
+    height: 200px
+  .pos5
+    z-index: 1
+    top: 0
+    right: 0
+    display: block
+    width: 180px
+    height: 200px
+
+.arrow
+  position: absolute
+  z-index: 10
+  top: 160px
+  width: 48px
+  height: 48px
+  cursor: pointer
+
+.prev
+  position: absolute
+  top: 300px
+  left: 0
+  width: 50%
+  height: 40px
+  background: url('../img/prev.png') no-repeat
+  background-position-x: center
+
+.next
+  position: absolute
+  top: 300px
+  right: 0
+  width: 50%
+  height: 40px
+  background: url('../img/next.png') no-repeat
+  background-position-x: center
+
+.roadmap
+  #swiper-1
+    display: none
+    max-width: 1000px
+    .swiper-slide
+      font-size: 18px
+      box-sizing: border-box
+      padding-left: 70px
+      h4
+        font-size: 23px
+        position: relative
+        padding-top: 60px
+        padding-right: 50px
+        padding-bottom: 15px
+        &:before
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 30px
+          height: 3px
+          content: ''
+          background: #d9b48d
+        p
+          font-family: 'GothamProBold'
+          font-size: 90px
+          position: absolute
+          top: 0
+          left: 0
+          opacity: .1
+          color: #333
+      ul
+        padding-top: 15px
+        color: #666
+        li
+          font-size: 15px
+          line-height: 20px
+          position: relative
+          position: relative
+          display: block !important
+          padding-left: 17px
+          color: #666
+          &:after
+            position: absolute
+            top: 8px
+            left: 0
+            width: 4px
+            height: 4px
+            content: ''
+            border-radius: 180px
+            background: #666
+  .swiper-button-prev
+    top: 80%
+    display: none
+    background: none
+  .swiper-button-next
+    top: 80%
+    display: none
+    background: none
+    right: 35px
+  .icon-chevron-thin-left
+    font-size: 55px
+  .icon-chevron-thin-right
+    font-size: 55px
+    padding-right: 40px
+
+@media (max-width: 1180px)
+  .roadmap #swiper-1
+    display: block
+
+@media (max-width: 900px)
+  .roadmap #swiper-1 .swiper-slide
+    padding-left: 50px
+
+@media (max-width: 767px)
+  .roadmap #swiper-1 .swiper-slide
+    padding-left: 70px
+
+@media (max-width: 1180px)
+  .roadmap
+    .swiper-button-prev, .swiper-button-next
+      display: block
+
+.roadshow
+  #swiper-2
+    max-width: 1000px
+    padding-bottom: 190px
+    .swiper-slide
+      font-size: 18px
+      background: #131414
+      h4
+        font-family: 'GothamProMedium'
+        font-size: 40px
+        padding-bottom: 10px
+        color: #fff
+      p
+        font-size: 15px
+        font-weight: 400
+        padding-bottom: 15px
+        color: #777
+    .swiper-slide__block
+      width: 100%
+      border-radius: 20px
+      background: #fff
+      img
+        width: 100%
+        border-top-left-radius: 17px
+        border-top-right-radius: 17px
+      p
+        font-size: 20px
+        width: 190px
+        padding-top: 20px
+        padding-left: 25px
+        color: #000
+      span
+        font-size: 14px
+        display: inline-block
+        padding-left: 25px
+        text-transform: uppercase
+        color: #532dff
+      a
+        position: relative
+        top: -10px
+        left: -10px
+        display: inline-block
+        img
+          width: 40px
+          height: 40px
+  .swiper-button-prev, .swiper-button-next
+    top: 58%
+    background: none
+  .icon-chevron-thin-left, .icon-chevron-thin-right
+    font-size: 55px
+    color: #fff
+  .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+    bottom: 80px
+  .swiper-pagination-bullet
+    width: 9px
+    height: 9px
+    background: #fff
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+    margin-left: 20px
+  .swiper-pagination-bullet-active
+    background: #fff
+
+@media (max-width: 1024px)
+  .roadshow
+    .swiper-button-prev, .swiper-button-next
+      display: none
+

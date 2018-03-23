@@ -1,0 +1,41 @@
+section.contact
+  .row.middle-xs
+    .col-md-6
+    .col-xs-12.col-md-6
+      .contact__thanks.flex.center-xs
+        span
+          | Спасибо! 
+          br
+        | Мы свяжемся с вами
+        br
+        | в ближайшее время.
+      form.form(action='send.php', method='post')
+        input.utm_source(type='hidden', name='utm_source')
+        input.utm_medium(type='hidden', name='utm_medium')
+        input.utm_campaign(type='hidden', name='utm_campaign')
+        input.utm_term(type='hidden', name='utm_term')
+        input.utm_content(type='hidden', name='utm_content')
+        p Переходим к действиям
+        h2 Заполните ваши контактные данные и кратко опишите задачу:
+        .form__element
+          input#username.floated(type='text', required='', autocomplete='off', name='name')
+          label(for='username') Ваше имя
+        .form__element
+          input#tel.floated(type='tel', required='', autocomplete='off', name='phone')
+          label(for='tel') Телефон
+        .form__element
+          input#email.floated(type='text', required='', autocomplete='off', name='email')
+          label(for='email') E-mail
+        textarea(placeholder='Напишите своими словами все, что поможет нам при обсуждении Вашего проекта', name='comment')
+        input#checkbox(type='checkbox')
+        label(for='checkbox')
+          | Я принимаю условия 
+          a(href='#') передачи информации
+        label(for='send')
+          .btn
+            input#send(type='submit', value='')
+            .btn__block Отправить
+        .contact__copyright © 2012 — 2018 Студия EXCV
+  a.close
+    | закрыть
+    span
